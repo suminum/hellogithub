@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f6f7;
+      }
+
+      header {
+        background: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .logo {
+        font-size: 36px;
+        color: #03c75a;
+        font-weight: bold;
+      }
+
+      .search {
+        display: flex;
+      }
+
+      .search input {
+        width: 500px;
+        padding: 12px;
+        border: 2px solid #03c75a;
+        outline: none;
+      }
+
+      .search button {
+        padding: 12px 20px;
+        background: #03c75a;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav {
+        background: white;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 30px auto;
+        display: flex;
+        gap: 20px;
+      }
+
+      .left {
+        flex: 3;
+      }
+
+      .right {
+        flex: 1;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">NAVER</div>
+
+      <div class="search">
+        <input id="searchInput"  type="text" placeholder="검색어를 입력하세요" />
+        <button id="searchButton">검색</button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#">메일</a>
+      <a href="#">카페</a>
+      <a href="#">블로그</a>
+      <a href="#">쇼핑</a>
+      <a href="#">뉴스</a>
+      <a href="#">지도</a>
+    </nav>
+
+    <div class="container">
+      <div class="left">
+        <div class="card">
+          <h2>오늘의 뉴스</h2>
+          <p>뉴스 영역</p>
+        </div>
+
+        <div class="card">
+          <h2>추천 콘텐츠</h2>
+          <p>콘텐츠 영역</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <h3>로그인</h3>
+          <button id="loginBtn"
+            style="
+              width: 100%;
+              padding: 12px;
+              background: #03c75a;
+              color: white;
+              border: none;
+            "
+          >
+            로그인
+          </button>
+        </div>
+
+        <div class="card">
+          <h3>날씨</h3>
+          <p id="weather">☀️ 28℃</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>© My Portal</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
